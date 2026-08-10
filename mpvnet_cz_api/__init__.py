@@ -1,5 +1,6 @@
-from .main import Api
+from .main import Api, Stop
 
 __all__ = [
-    "Api"
+    "Api",
+    "Stop"
 ]

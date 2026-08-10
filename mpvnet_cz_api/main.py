@@ -5,8 +5,8 @@ import json
 
 
 class Api:
-    def __init__(self, stop_number):
-        self.url = "https://www.mpvnet.cz/idol/tab/departures"
+    def __init__(self, stop_number, operator):
+        self.url = f"https://www.mpvnet.cz/{operator}/tab/departures"
         self.headers = {"origin": "https://www.mpvnet.cz"}
         self.payload = {
             "isDepartures": True,
@@ -51,4 +51,11 @@ class Api:
 
     def sync(self):
         return self.parse_html(self.get_data(self.url, self.headers, self.payload))
+
+
+class Stop:
+    @staticmethod
+    def get_num(stop_name, operator):
+        return requests.post(f"https://www.mpvnet.cz/{operator}/tab/stops", headers={"origin": "https://www.mpvnet.cz"}, json={"value":f"{stop_name}"}).text
+
         

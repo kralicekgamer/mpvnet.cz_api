@@ -10,11 +10,21 @@ pip install mpvnet_cz_api
 ```py
 from mpvnet_cz_api import Api
 
-api = Api(53289)
+api = Api(53289, "idol")
 print(api.sync())
 ```
+- První číslo je číslo zastávky.
+- Druhé pole je dopravce (pid, idol, odis, zlin, jikord)
 
-## Stanice
-Číslo stanice je nutné si vycucnout z webu vašeho dopravce případně inspektovat requesty na mpvnet.cz
+```py
+from mpvnet_cz_api import Stop
 
-Pro IDOL doporučuji https://dopravnimapy.kraj-lbc.cz/app/idol/zastavky.php
+print(Stop.get_num("Janův Důl", "idol"))
+```
+- Kód pro get jsonu, který obsahuje číslo zastávek.
+
+## Verze
+| Verze | Stav | Poznámka |
+| --- | --- | --- |
+| **1.0.X** | ✅ | Bez custom dopravce. Bez dependencies. |
+| **1.1** | ⭐ ||

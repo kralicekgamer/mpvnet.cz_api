@@ -7,10 +7,21 @@ where = ["."]
 
 [project]
 name = "mpvnet_cz_api"
-version = "1.0"
+version = "1.1"
 description = "API for mpvnet.cz."
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [
   { name="Matěj Adamec", email="kralyk@kralyk.dev" }
+]
+dependencies = [
+  "beautifulsoup4==4.15.0",
+  "bs4==0.0.2",
+  "certifi==2026.7.22",
+  "charset-normalizer==3.4.9",
+  "idna==3.18",
+  "requests==2.34.2",
+  "soupsieve==2.9.2",
+  "typing_extensions==4.16.0",
+  "urllib3==2.7.0"
 ]
