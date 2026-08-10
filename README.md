@@ -26,5 +26,5 @@ print(Stop.get_num("Janův Důl", "idol"))
 ## Verze
 | Verze | Stav | Poznámka |
 | --- | --- | --- |
-| **1.0.X** | ✅ | Bez custom dopravce. Bez dependencies. |
+| **1.0.X** | ✅ | Omezená funkcionalita programu |
 | **1.1** | ⭐ ||
